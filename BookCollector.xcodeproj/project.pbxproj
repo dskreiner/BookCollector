@@ -13,6 +13,8 @@
 		D2AA01041E527E4D0026C2F4 /* BookCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2AA01021E527E4D0026C2F4 /* BookCollector.xcdatamodeld */; };
 		D2AA01061E527E4D0026C2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AA01051E527E4D0026C2F4 /* Assets.xcassets */; };
 		D2AA01091E527E4D0026C2F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AA01071E527E4D0026C2F4 /* LaunchScreen.storyboard */; };
+		D2AA01111E5285580026C2F4 /* IMG_1489.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2AA01101E5285580026C2F4 /* IMG_1489.jpg */; };
+		D2AA01131E5287C50026C2F4 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA01121E5287C50026C2F4 /* BookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D2AA01051E527E4D0026C2F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2AA01081E527E4D0026C2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AA010A1E527E4D0026C2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2AA01101E5285580026C2F4 /* IMG_1489.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1489.jpg; sourceTree = "<group>"; };
+		D2AA01121E5287C50026C2F4 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				D2AA00FB1E527E4D0026C2F4 /* AppDelegate.swift */,
 				D2AA00FD1E527E4D0026C2F4 /* ViewController.swift */,
+				D2AA01121E5287C50026C2F4 /* BookViewController.swift */,
+				D2AA01101E5285580026C2F4 /* IMG_1489.jpg */,
 				D2AA00FF1E527E4D0026C2F4 /* Main.storyboard */,
 				D2AA01051E527E4D0026C2F4 /* Assets.xcassets */,
 				D2AA01071E527E4D0026C2F4 /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AA01091E527E4D0026C2F4 /* LaunchScreen.storyboard in Resources */,
+				D2AA01111E5285580026C2F4 /* IMG_1489.jpg in Resources */,
 				D2AA01061E527E4D0026C2F4 /* Assets.xcassets in Resources */,
 				D2AA01011E527E4D0026C2F4 /* Main.storyboard in Resources */,
 			);
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AA00FE1E527E4D0026C2F4 /* ViewController.swift in Sources */,
+				D2AA01131E5287C50026C2F4 /* BookViewController.swift in Sources */,
 				D2AA00FC1E527E4D0026C2F4 /* AppDelegate.swift in Sources */,
 				D2AA01041E527E4D0026C2F4 /* BookCollector.xcdatamodeld in Sources */,
 			);
