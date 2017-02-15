@@ -10,16 +10,29 @@ import UIKit
 
 class BookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var addUpdateButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var bookImageView: UIImageView!
     
     @IBOutlet weak var titleTextField: UITextField!
     
     var imagePicker = UIImagePickerController()
     
+    var book : Book? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         imagePicker.delegate = self
+        
+        if book != nil {
+            bookImageView.image = UIImage(data: book!.image as! Data)
+            titleTextField.text = book!.title
+            
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
     }
 
     @IBAction func photosTapped(_ sender: Any) {
@@ -34,13 +47,27 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        if book != nil {
+            book!.title = titleTextField.text
+            book!.image = UIImagePNGRepresentation(bookImageView.image!)! as NSData
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let book = Book(context: context)
+            book.title = titleTextField.text
+            book.image = UIImagePNGRepresentation(bookImageView.image!)! as NSData
+        }
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController!.popViewController(animated: true)
+    }
+    
+    @IBAction func deleteTapped(_ sender: Any) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let book = Book(context: context)
-        book.title = titleTextField.text
-        book.image = UIImagePNGRepresentation(bookImageView.image!)! as NSData
+        context.delete(book!)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
     }
